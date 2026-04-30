@@ -1,42 +1,123 @@
+/* Configurações Gerais */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais moderna */
+    margin: 0;
+    line-height: 1.6; /* Melhora a leitura dos parágrafos */
+    background: #f4f4f4;
+    color: #333;
 }
 
+/* Cabeçalho e Navegação */
 header {
-  background: #ffff;
-  color: black;
-  padding: 15px;
+    background: #ffffff;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e menu à direita */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000000; /* Verde escuro institucional */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
 }
 
 nav a {
-  color: black;
-  margin-right: 15px;
-  text-decoration: none;
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: #badd89; /* Cor do banner no hover */
+}
+
+/* Banner Principal */
 .banner {
-  background: rgb(158, 200, 98);
-  color: black;
-  padding: 40px;
-  text-align: center;
-    
+    background: #badd89;
+    color: #000000;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .banner h2 {
-  margin: 5px 0;
+    margin: 0 auto 15px;
+    max-width: 90%;
+    font-size: 1.8rem;
 }
 
+.banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Seções e Grades */
+section {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #000000;
+}
+
+/* Cursos (Cards) */
 .cards {
-  display: flex;
-  gap: 10px;
-  padding: 20px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para não quebrar em telas menores */
 }
 
 .card {
-  background: rgb(213, 231, 204);
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1;
+    background: #d5e7cc;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px; /* Garante que o card não fique fino demais */
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #c4d6ba;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Vídeos */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+iframe {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
