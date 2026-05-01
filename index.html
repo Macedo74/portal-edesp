@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal EDESP | Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <div class="container">
-            <h1>Portal EDESP</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="videos.html">Vídeos</a></li>
-                    <li><a href="conteudos.html">Conteúdos</a></li>
-                </ul>
-            </nav>
+        <!-- Logo 1 (Esquerda) -->
+        <a href="index.html" class="logo">
+            <img src="assets/logo_edesp.png" alt="Logo EDESP">
+        </a>
+
+        <!-- Menu (Centro) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo 2 (Direita) -->
+        <div class="logo-direita">
+            <img src="assets/logo-gov.png" alt="Portal EDESP" class="logo-texto">
         </div>
     </header>
 
@@ -27,8 +36,7 @@
         <section class="banner">
             <div class="banner-content">
                 <h2>Escola de Desenvolvimento Social do Estado de São Paulo</h2>
-                <p>Capacitação e aprimoramento para os profissionais do SUAS.</p>
-                <a href="conteudos.html" class="btn-principal">Ver Cursos</a>
+                <p>Capacitação e aprimoramento para profissionais do SUAS.</p>
             </div>
         </section>
 
@@ -37,17 +45,26 @@
             <h3>Cursos em destaque</h3>
             <div class="cards">
                 <div class="card">
-                    <h4>Metodologias do Trabalho Social com Famílias</h4>
-                    <a href="#" class="saiba-mais">Saiba mais</a>
-                </div>
-                <div class="card">
                     <h4>Vigilância Socioassistencial</h4>
-                    <a href="#" class="saiba-mais">Saiba mais</a>
+                    <!-- Link para a página específica -->
+                    <a href="vigilancia.html" class="saiba-mais">Saiba mais</a>
                 </div>
+
+                <div class="card">
+                    <h4>Metodologias do Trabalho Social com Famílias</h4>
+                    <a href="metodologias.html" class="saiba-mais">Saiba mais</a>
+                </div>
+
                 <div class="card">
                     <h4>Gestão Financeira e Orçamentária do SUAS</h4>
-                    <a href="#" class="saiba-mais">Saiba mais</a>
+                    <a href="financeira.html" class="saiba-mais">Saiba mais</a>
                 </div>
+
+                <div class="card">
+                    <h4>Tecnologia</h4>
+                    <a href="excel.html" class="saiba-mais">Saiba mais</a>
+                </div>
+
             </div>
         </section>
 
@@ -55,15 +72,42 @@
         <section class="secao-padrao bg-cinza">
             <h3>Últimos vídeos</h3>
             <div class="video-grid">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/qzc6rpowlBo" title="Vídeo EDESP 1" frameborder="0" allowfullscreen></iframe>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/QC9WCaXlIE0" title="Vídeo EDESP 2" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/qzc6rpowlBo" title="Vídeo EDESP 1"
+                    frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/QC9WCaXlIE0" title="Vídeo EDESP 2"
+                    frameborder="0" allowfullscreen></iframe>
             </div>
-        </section>
+
+            <!-- Início da Seção Única -->
+            <section class="secao-padrao">
+                <h3>Biblioteca e Espaço Conviver</h3> <!-- Título que engloba os dois -->
+
+                <div class="cards">
+
+                    <!-- CARD 1: BIBLIOTECA -->
+                    <div class="card">
+                        <h4>Biblioteca</h4>
+                        <a href="acervo.html" class="saiba-mais">Saiba mais</a>
+                    </div>
+
+                    <!-- CARD 2: CONVIVER -->
+                    <div class="card">
+                        <h4>Espaço Conviver</h4>
+                        <a href="conviver.html" class="saiba-mais">Saiba mais</a>
+                    </div>
+
+                </div> <!-- Fecha a div "cards" que segura os dois -->
+            </section> <!-- Fecha a seção principal -->
+
     </main>
 
-    <footer>
-        <p>© 2026 EDESP - Escola de Desenvolvimento Social do Estado de SP</p>
+    <footer id="contato">
+        <p>Telefone: (11) 2763-8280 | E-mail: edesp@sp.gov.br </p>
+        <p>Endereço: Rua Boa Vista, 170 - 5º andar - Bloco 4 - Centro Histórico</p>
+        <p>São Paulo - SP - CEP: 01014-001</p>
+        <p><strong>© 2026 EDESP - Escola de Desenvolvimento Social do Estado de São Paulo</strong></p>
     </footer>
 
 </body>
+
 </html>
