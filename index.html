@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal EDESP | Início</title>
+    <!-- 1. Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Remova a barra inicial para ele procurar na mesma pasta do HTML -->
-<link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
@@ -20,9 +22,10 @@
         <!-- Menu (Centro) -->
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#cursos">Cursos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="index.html#secao-videos">Vídeos</a></li>
+                <li><a href="index.html#secao-biblioteca">Biblioteca</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
 
@@ -62,43 +65,60 @@
                 </div>
 
                 <div class="card">
-                    <h4>Tecnologia</h4>
+                    <h4>Excel Básico e Avançado</h4>
                     <a href="excel.html" class="saiba-mais">Saiba mais</a>
+                </div>
+
+                <div class="card">
+                    <h4>CapacitaSuas</h4>
+                    <a href="capacitasuas.html" class="saiba-mais">Saiba mais</a>
+                </div>
+
+                <div class="card">
+                    <h4>Procedimentos Administrativos nas DRADS</h4>
+                    <a href="administrativo.html" class="saiba-mais">Saiba mais</a>
                 </div>
 
             </div>
         </section>
 
-        <!-- Seção Vídeos -->
-        <section class="secao-padrao bg-cinza">
+        <section id="secao-videos" class="secao-padrao bg-cinza">
             <h3>Últimos vídeos</h3>
-            <div class="video-grid">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/qzc6rpowlBo" title="Vídeo EDESP 1"
-                    frameborder="0" allowfullscreen></iframe>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/QC9WCaXlIE0" title="Vídeo EDESP 2"
-                    frameborder="0" allowfullscreen></iframe>
+            <div class="cards"> <!-- Usamos a classe 'cards' para manter o alinhamento igual aos outros -->
+
+                <!-- Bloco de Vídeo 1 como um Card -->
+                <div class="card card-video">
+                    <iframe src="https://www.youtube.com/embed/qzc6rpowlBo" title="Vídeo EDESP 1" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
+                <!-- Bloco de Vídeo 2 como um Card -->
+                <div class="card card-video">
+                    <iframe src="https://www.youtube.com/embed/QC9WCaXlIE0" title="Vídeo EDESP 2" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
             </div>
+        </section>
 
-            <!-- Início da Seção Única -->
-            <section class="secao-padrao">
-                <h3>Biblioteca e Espaço Conviver</h3> <!-- Título que engloba os dois -->
+        <section id="secao-biblioteca" class="secao-padrao">
+            <h3>Biblioteca e Espaço Conviver</h3>
+            <div class="cards">
 
-                <div class="cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h4>Biblioteca</h4>
+                    <a href="acervo.html" class="saiba-mais">Saiba mais</a>
+                </div>
 
-                    <!-- CARD 1: BIBLIOTECA -->
-                    <div class="card">
-                        <h4>Biblioteca</h4>
-                        <a href="acervo.html" class="saiba-mais">Saiba mais</a>
-                    </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h4>Espaço Conviver</h4>
+                    <a href="convivencia.html" class="saiba-mais">Saiba mais</a>
+                </div>
 
-                    <!-- CARD 2: CONVIVER -->
-                    <div class="card">
-                        <h4>Espaço Conviver</h4>
-                        <a href="conviver.html" class="saiba-mais">Saiba mais</a>
-                    </div>
-
-                </div> <!-- Fecha a div "cards" que segura os dois -->
-            </section> <!-- Fecha a seção principal -->
+            </div>
+        </section>
 
     </main>
 
@@ -108,6 +128,31 @@
         <p>São Paulo - SP - CEP: 01014-001</p>
         <p><strong>© 2026 EDESP - Escola de Desenvolvimento Social do Estado de São Paulo</strong></p>
     </footer>
+
+    <!-- 1. O Botão primeiro -->
+    <button id="backToTop" title="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- 2. O Script depois -->
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "flex"; // Use flex para alinhar o ícone
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        backToTop.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 
 </body>
 

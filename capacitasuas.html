@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CapacitaSuas - EDESP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1. COLE AQUI O CONTEÚDO DO SEU HEADER (IGUAL AO DA INDEX) -->
+    <header>
+        <!-- Logo 1 (Esquerda) -->
+        <a href="index.html" class="logo">
+            <img src="assets/logo_edesp.png" alt="Logo EDESP">
+        </a>
+
+        <!-- Menu (Centro) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#cursos">Cursos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo 2 (Direita) -->
+        <div class="logo-direita">
+            <img src="assets/logo-gov.png" alt="Portal EDESP" class="logo-texto">
+        </div>
+    </header>
+
+    <main class="secao-padrao">
+        <h1>CapacitaSuas</h1>
+        <hr>
+        <div class="conteudo-curso" style="text-align: left; margin-top: 30px;">
+            <h3>Sobre o curso</h3>
+            <p>O CapacitaSUAS é o Programa Nacional de Capacitação do Sistema Único de Assistência Social, executado
+                pela EDESP em São Paulo. Seu objetivo é garantir a educação permanente de profissionais, gestores e
+                conselheiros, qualificando a oferta dos serviços socioassistenciais. O conteúdo abrange desde a
+                Vigilância Socioassistencial até a Gestão Orçamentária e o Controle Social, fortalecendo a rede de
+                proteção em todo o estado.</p>
+
+            <h3>Público-alvo</h3>
+            <p>Os cursos são direcionados a três perfis principais:<br>
+                ● Gestão: Trabalhadores que atuam no planejamento e administração das secretarias de
+                assistência social.<br>
+                ● Provimento: Profissionais que realizam o atendimento direto à população nos serviços
+                (como CRAS e
+                CREAS).<br>
+                ● Controle Social: Conselheiros municipais e estaduais de assistência social.
+            </p>
+
+            <h3>Principais Cursos Ofertados</h3>
+            <p>Historicamente, o CapacitaSUAS oferece trilhas formativas específicas, tais como:<br>
+                ● Atualização em Vigilância Socioassistencial: Focado no uso de dados para o planejamento de
+                serviços.<br>
+                ● Atualização de Planos de Assistência Social: Orientações sobre a elaboração e monitoramento dos planos
+                decenais dos municípios.<br>
+                ● Introdução ao Exercício do Controle Social: Capacitação para conselheiros sobre a fiscalização e apoio
+                às políticas públicas.<br>
+                ● Gestão Orçamentária e Financeira do SUAS: Focado na aplicação correta dos recursos públicos da área
+                social.</p>
+
+            <h3>Modalidade de Ensino</h3>
+            <p>Os cursos da EDESP podem ocorrer de três formas:<br>
+                ● Presencial: Frequentemente realizados em polos regionais para facilitar o acesso de técnicos de
+                diferentes municípios.<br>
+                ● EAD (Online): Através do portal da escola, com audioaulas, fóruns e exercícios.<br>
+                ● Semipresencial: Combinando atividades virtuais com encontros presenciais.</p>
+
+            <h3>Como Participar?</h3>
+            <p>Como o programa é voltado para quem já atua na rede, as convocações e inscrições geralmente ocorrem via
+                Secretaria de Desenvolvimento Social (SEDS) e são divulgadas aos municípios paulistas. Recomenda-se
+                acompanhar o portal oficial da EDESP para editais de novas turmas.</p>
+
+            <a href="index.html" style="color: var(--cor-primaria-teal); font-weight: bold; text-decoration: none;">
+                ← Voltar para a página inicial
+            </a>
+        </div>
+    </main>
+
+    <!-- 2. COLE AQUI O CONTEÚDO DO SEU FOOTER (IGUAL AO DA INDEX) -->
+    <footer id="contato">
+        <p>Telefone: (11) 2763-8280 | E-mail: edesp@sp.gov.br </p>
+        <p>Endereço: Rua Boa Vista, 170 - 5º andar - Bloco 4 - Centro Histórico</p>
+        <p>São Paulo - SP - CEP: 01014-001</p>
+        <p><strong>© 2026 EDESP - Escola de Desenvolvimento Social do Estado de São Paulo</strong></p>
+    </footer>
+
+    <a href="#topo" id="backToTop" class="back-to-top" title="Voltar ao topo">
+        &#8593;
+    </a>
+
+    <!-- 2. O Script depois -->
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "flex"; // Use flex para alinhar o ícone
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        backToTop.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+</body>
+
+</html>

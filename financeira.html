@@ -100,6 +100,31 @@
         <p>São Paulo - SP - CEP: 01014-001</p>
         <p><strong>© 2026 EDESP - Escola de Desenvolvimento Social do Estado de São Paulo</strong></p>
     </footer>
+
+    <a href="#topo" id="backToTop" class="back-to-top" title="Voltar ao topo">
+        &#8593;
+    </a>
+
+    <!-- 2. O Script depois -->
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "flex"; // Use flex para alinhar o ícone
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        backToTop.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
 </body>
 
 </html>

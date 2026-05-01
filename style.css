@@ -101,7 +101,43 @@ nav a.active {
     /* Opcional: deixa um pouco menos chamativa que a principal */
 }
 
-/* Removemos o equilibrador after antigo pois agora temos 3 elementos reais */
+.container-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.info-contato {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.form-contato {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1DEE0;
+    border-radius: 8px;
+    background: #F9F9F9;
+    font-family: inherit;
+}
+
+.form-contato button {
+    cursor: pointer;
+    border: none;
+    align-self: flex-start;
+}
 
 /* ==========================================================================
    Banner Principal
@@ -150,7 +186,7 @@ nav a.active {
    ========================================================================== */
 section,
 .secao-padrao {
-    padding: 50px 5%;
+    padding: 20px 5%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -167,46 +203,68 @@ section,
     justify-content: center;
 }
 
-/* 2. O CARD: Controla o tamanho individual */
 .card {
-    background: #EBF1F2; 
-    padding: 30px;
+    background: #EBF1F2;
+    padding: 20px;
     border-radius: 12px;
+    transition: all 0.3s ease;
+    /* Isso faz o "salto" ser elegante e não um tranco */
+
+    /* Largura flexível mas com limite */
     width: 100%;
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do card */
-    
-    /* ALINHAMENTO INTERNO */
+    max-width: 320px;
+
+    /* ALTURA AUTOMÁTICA: O card cresce conforme o texto */
+    height: auto;
+    min-height: 150px;
+    /* Garante que não fiquem achatados demais */
+
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    
-    
-    /* ESTÉTICA */
-    border: 1px solid #D1DEE0; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+
+    /* Adicionando a borda e sombra que estavam soltas no seu código */
+    border: 1px solid #D1DEE0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
+
 /* Quando o mouse estiver sobre o CARD, o botão SAIBAMAIS muda de cor */
 .card:hover .saiba-mais {
     background-color: var(--cor-destaque-laranja);
-    transform: scale(1.05); /* Dá um leve aumento para destacar a ação */
+    transform: scale(1.05);
+    /* Dá um leve aumento para destacar a ação */
 }
 
 /* Garanta que o botão original tenha a transição para o efeito ser suave */
 .saiba-mais {
     transition: all 0.3s ease;
-    background-color: var(--cor-primaria-teal); /* Cor original (azul) */
+    background-color: var(--cor-primaria-teal);
+    /* Cor original (azul) */
     /* ... o restante do seu código atual ... */
 }
 
 /* Ajustado para aceitar h3 ou h4 dentro do card */
 .card h3,
 .card h4 {
-    color: var(--cor-primaria-teal);
-    margin-bottom: 15px;
+    /* 1. Define uma altura fixa para a área do título */
+    /* 50px geralmente cabem 2 linhas de texto com folga */
+    height: 50px;
+
+    /* 2. Centraliza o texto verticalmente dentro desses 50px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 3. Ajustes finos de margem e fonte */
     margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--cor-primaria-teal);
+    font-size: 1.1rem;
 }
 
 .saiba-mais {
@@ -224,16 +282,69 @@ section,
     transition: all 0.3s ease;
 }
 
-/* Vídeos com proporção travada */
-.video-grid iframe {
+/* Pode apagar aquelas regras com !important da biblioteca e deixar apenas isso: */
+#secao-biblioteca .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Forçamos os cards da biblioteca a terem altura automática */
+#secao-biblioteca .card {
+    height: auto !important;
+    min-height: 150px;
+    /* Ajuste essa altura para ficar parecida com os de cima */
+    flex: 0 1 300px !important;
+    /* Impede que eles cresçam para os lados também */
+}
+
+/* Estilo específico para o card que contém vídeo */
+.card-video {
+    padding: 10px;
+    /* Reduz um pouco o espaço interno para o vídeo aparecer mais */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-video iframe {
     width: 100%;
-    max-width: 350px;
-    min-width: 280px;
-    border-radius: 12px;
-    border: 1px solid #D1DEE0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    /* O vídeo ocupa toda a largura do card */
     aspect-ratio: 16 / 9;
-    transition: transform 0.3s ease;
+    /* Mantém o formato padrão de cinema/YouTube */
+    height: auto;
+    /* A altura se ajusta sozinha à largura */
+    border-radius: 8px;
+    /* Deixa as pontas do vídeo arredondadas como o card */
+}
+
+/* Garante que os cards de vídeo tenham o mesmo tamanho dos de curso/biblioteca */
+.card-video {
+    flex: 0 1 300px;
+    /* Mesma largura que definimos para a biblioteca */
+    height: auto;
+    align-self: flex-start;
+}
+
+.cards,
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* CRUCIAL: impede que os cards fiquem altos sem necessidade */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Para ficar um embaixo do outro no celular */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================================================================
@@ -257,4 +368,54 @@ footer p {
     /* Diminui o espaço entre um parágrafo e outro */
     font-size: 1.0rem;
     /* Opcional: uma letra levemente menor fica elegante no rodapé */
+}
+
+/* Estado Normal do Botão */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #008080;
+    /* Sua cor Teal padrão */
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 9999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efeito Alaranjado ao passar o mouse */
+#backToTop:hover {
+    background-color: #d4906f;
+    /* Laranja (ajuste para o seu tom exato) */
+    transform: translateY(-5px);
+    color: #ffffff !important;
+}
+
+.link-voltar {
+    display: block;
+    text-align: left;
+    margin-top: 35px;
+    color: var(--cor-primaria-teal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.conteudo-institucional h2 {
+    text-align: center;
+    /* Título centralizado */
+}
+
+.conteudo-institucional p,
+.conteudo-institucional ul {
+    text-align: left;
+    /* Parágrafos e listas à esquerda */
 }
