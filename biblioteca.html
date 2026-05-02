@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - EDESP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1. COLE AQUI O CONTEÚDO DO SEU HEADER (IGUAL AO DA INDEX) -->
+    <header>
+        <!-- Logo 1 (Esquerda) -->
+        <a href="index.html" class="logo">
+            <img src="assets/logo_edesp.png" alt="Logo EDESP">
+        </a>
+
+        <!-- Menu (Centro) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo 2 (Direita) -->
+        <div class="logo-direita">
+            <img src="assets/logo-gov.png" alt="Portal EDESP" class="logo-texto">
+        </div>
+    </header>
+
+    <main class="secao-padrao">
+        <h1>Biblioteca EDESP: Conhecimento ao seu Alcance</h1>
+        <hr>
+        <div class="conteudo-curso" style="text-align: left; margin-top: 30px;">
+            <h3>Sobre a Biblioteca</h3>
+            <p>A Biblioteca da Escola de Desenvolvimento Social (EDESP) é um espaço dedicado ao aperfeiçoamento
+                constante dos nossos servidores. Nosso acervo conta com obras selecionadas sobre gestão pública,
+                desenvolvimento social, direitos humanos, poesias e muito mais. Escolha sua próxima leitura abaixo,
+                visite nossa
+                estante física e realize a retirada de forma simples e rápida através do QR Code disponível no local.
+            </p>
+
+            <!-- Seção da Biblioteca -->
+            <section id="secao-biblioteca">
+                <div class="secao-padrao">
+                    <h3>DETAQUES DO ACERVO</h3>
+
+                    <div class="cards">
+
+                        <!-- Exemplo de Livro 1 -->
+                        <div class="card">
+                            <h3>Poetize 2025 - Seleção Poesia Brasileira</h3>
+                            <p>Um livro de poesias que está intimamente ligado à nossa existência.</p>
+
+                            <!-- No clique, enviamos: Título, Texto detalhado, Link da Imagem e Estante -->
+                            <button class="saiba-mais" onclick="abrirModal(
+        'Poetize 2025 - Seleção Poesia Brasileira', 
+        'Uma celebração da sensibilidade que universaliza sentimentos e acende emoções profundas. Explore o poder da palavra nesta antologia que conecta a poesia à nossa própria existência. <br><br> <b>Autor:</b> Antologia, <br><b>Organização:</b> Isaac Almeida Ramos','/assets/poetize.png', 
+        'Espaço Conviver - Estante da Biblioteca')">
+                                Ver Detalhes
+                            </button>
+                        </div>
+
+                        <!-- Exemplo de Livro 2 -->
+                        <div class="card">
+                            <h3>O Que Me Inspira</h3>
+                            <p>"O que me inspira" é uma antologia que pulsa com a força da diversidade e da verdade.</p>
+
+                            <!-- No clique, enviamos: Título, Texto detalhado, Link da Imagem e Estante -->
+                            <button class="saiba-mais" onclick="abrirModal(
+        'O Que Me Inspira', 
+        'A contribuição social desta obra é imensa. Em tempos de silenciamentos, de desigualdades e de urgências emocionais, este livro se ergue como um espaço de escuta e de acolhimento. <br><br> <b>Autor:</b> Antologia, <br><b>Organização:</b> Amilton Vieira de Santana','/assets/inspira.png', 
+        'Espaço Conviver - Estante da Biblioteca')">
+                                Ver Detalhes
+                            </button>
+                        </div>
+
+                        <!-- Exemplo de Livro 3 -->
+                        <div class="card">
+                            <h3>Conexões Poéticas</h3>
+                            <p>Um livro de poesias que está intimamente ligado à nossa existência.</p>
+
+                            <!-- No clique, enviamos: Título, Texto detalhado, Link da Imagem e Estante -->
+                            <button class="saiba-mais" onclick="abrirModal(
+        'Conexões Poéticas', 
+        'A poesia é a ponte silenciosa que cria conexões entre almas distantes por meio de sentimentos que não precisam de explicação. <br><br> <b>Autor:</b> Antologia, <br><b>Organização:</b> Lura Editorial','/assets/conexoes.png', 
+        'Espaço Conviver - Estante da Biblioteca')">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                        <!-- Adicione mais cards conforme necessário seguindo este padrão -->
+
+                    </div>
+                </div>
+                <!-- Zeramos a margem de baixo do título -->
+                <h3 style="margin-bottom: 5px; text-align: center;">
+                    <h3>Explore nosso acervo e retire seu livro na estante física utilizando o QR Code de
+                        empréstimo.
+                    </h3>
+
+                    <!-- Zeramos a margem de cima da lista -->
+                    <div class="lista-acervo-completo" style="margin-top: 0; padding-top: 0;">
+                        <ul class="colunas-livros" style="margin-top: 0;">
+                            <li>A Arte da Prudência</li>
+                            <li>Gestão Pública Eficiente</li>
+                            <li>O Contrato Social</li>
+                            <li>Liderança Estratégica</li>
+                            <li>Desenvolvimento Sustentável</li>
+                            <li>Psicologia Social</li>
+                            <li>Direitos Humanos em Foco</li>
+                            <li>Inovação no Setor Público</li>
+                            <li>Ética no Setor Público</li>
+                        </ul>
+                    </div>
+
+            </section>
+
+            <a href="index.html" style="color: var(--cor-primaria-teal); font-weight: bold; text-decoration: none;">
+                ← Voltar para a página inicial
+            </a>
+        </div>
+    </main>
+
+    <footer
+        style="background-color: #000000; color: #ffffff; padding: 60px 20px 20px; font-family: sans-serif; width: 100%; box-sizing: border-box;">
+
+        <!-- Parte Superior: Colunas de Links -->
+        <div
+            style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content:建设; gap: 40px; margin-bottom: 50px;">
+
+            <!-- Cursos e Eventos -->
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 22px; margin-bottom: 25px; font-weight: bold;">Cursos e Eventos</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.2;">
+                    <li><a href="index.html#secao-cursos"
+                            style="color: #ffffff; text-decoration: none; opacity: 0.8;">Cursos em destaques</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Links Rápidos (Lado Direito do Footer) -->
+            <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 20px;">
+
+                <a href="https://www.fala.sp.gov.br/" target="_blank"
+                    style="color: #ffffff; text-decoration: none; font-size: 22px; font-weight: bold;">
+                    Fala SP
+                </a>
+
+                <a href="https://www.transparencia.sp.gov.br/" target="_blank"
+                    style="color: #ffffff; text-decoration: none; font-size: 22px; font-weight: bold;">
+                    Transparência
+                </a>
+
+                <!-- Link do Termo de Uso Atualizado -->
+                <a href="https://www.cms.sp.gov.br/cms/termo-uso" target="_blank"
+                    style="color: #ffffff; text-decoration: none; font-size: 22px; font-weight: bold;">
+                    Termo de Uso
+                </a>
+
+                <!-- Link da Política de Privacidade Atualizado -->
+                <a href="https://www.cms.sp.gov.br/cms/politica-privacidade" target="_blank"
+                    style="color: #0056b3; text-decoration: none; font-size: 20px; font-weight: bold; margin-top: 5px;">
+                    Política de Privacidade
+                </a>
+            </div>
+
+            <!-- Parte Central: Logo e Redes Sociais -->
+            <div
+                style="max-width: 1200px; margin: 0 auto; border-top: 1px solid #333; padding-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+
+                <!-- Logo Governo -->
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="/assets/governo.png" alt="Logo São Paulo" style="height: 150px;">
+                </div>
+
+                <!-- Redes Sociais -->
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
+
+                    <span style="font-size: 14px; color: white;">Acompanhe as novidades do Governo do Estado de São
+                        Paulo</span>
+
+                    <!-- Bloco de Ícones Reais -->
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/governosp/" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-facebook-f" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/governosp/" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-x-twitter" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/governosp/" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-instagram" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/governosp/" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-linkedin-in" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/governosp" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-youtube" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@governosp" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-tiktok" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://www.whatsapp.com/channel/0029Va4tIbCFHWq7sOctpz23" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- Flickr -->
+                        <a href="https://www.flickr.com/photos/governosp/" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-flickr" style="font-size: 16px;"></i>
+                        </a>
+
+                        <!-- Threads -->
+                        <a href="https://www.threads.com/@governosp" target="_blank"
+                            style="background: #cc0000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fa-brands fa-threads" style="font-size: 16px;"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Parte Inferior: Copyright e Texto Jurídico -->
+                <div
+                    style="color: white !important; max-width: 1200px; margin: 0 auto 0; text-align: center; font-size: 10px; line-height: 1.6;">
+                    <p style="font-weight: bold; margin-bottom: 0;">© 2026 EDESP - Escola de Desenvolvimento Social
+                        do Estado de São Paulo. Todos os direitos reservados.</p>
+                    <div style="max-width: 1200px; margin: 40px auto 0; text-align: center;">
+                        <p
+                            style="color: white !important; font-size: 12px !important; font-weight: bold !important; line-height: 1.4 !important; margin: 0; padding: 0;">
+                            Este site e todo o seu conteúdo, incluindo textos, imagens e design, são protegidos por
+                            direitos autorais e não podem ser reproduzidos, distribuídos ou modificados sem
+                            permissão expressa. Para mais informações ou para solicitações de uso, acesse nosso site
+                            <a href="https://cms.sp.gov.br"
+                                style="color: inherit; text-decoration: underline;">cms.sp.gov.br</a>
+                            - sistema de gerenciamento de conteúdo do Estado de São Paulo.
+                        </p>
+                    </div>
+
+                </div>
+
+    </footer>
+
+    <a href="#topo" id="backToTop" class="back-to-top" title="Voltar ao topo">
+        &#8593;
+    </a>
+
+    <!-- 2. O Script depois -->
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "flex"; // Use flex para alinhar o ícone
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        backToTop.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+    <div id="meuModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                <!-- Aqui é onde a imagem do livro vai carregar -->
+                <img id="modal-img" src="" style="width: 150px; border-radius: 8px;">
+
+                <div style="text-align: left;">
+                    <h2 id="modal-titulo" style="color: var(--cor-primaria-teal);"></h2>
+                    <p id="modal-detalhes"></p>
+                    <p><strong>Onde encontrar:</strong> <span id="modal-estante"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal(titulo, detalhes, imagem, estante) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-detalhes').innerHTML = detalhes;
+            document.getElementById('modal-img').src = imagem;
+            document.getElementById('modal-estante').innerText = estante;
+            document.getElementById('meuModal').style.display = "block";
+        }
+
+        function fecharModal() {
+            document.getElementById('meuModal').style.display = "none";
+        }
+
+        // Fecha se o usuário clicar fora da caixa branca
+        window.onclick = function (event) {
+            var modal = document.getElementById('meuModal');
+            if (event.target == modal) { fecharModal(); }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -265,6 +265,7 @@ section,
     line-height: 1.2;
     color: var(--cor-primaria-teal);
     font-size: 1.1rem;
+    font-weight: normal;
 }
 
 .saiba-mais {
@@ -299,6 +300,14 @@ section,
     /* Impede que eles cresçam para os lados também */
 }
 
+.card p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: auto;
+    /* Empurra o botão saiba-mais para o fundo, alinhando todos */
+}
+
 /* Estilo específico para o card que contém vídeo */
 .card-video {
     padding: 10px;
@@ -317,6 +326,119 @@ section,
     /* A altura se ajusta sozinha à largura */
     border-radius: 8px;
     /* Deixa as pontas do vídeo arredondadas como o card */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo escurecido */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+/* Alinha os containers dos cards na biblioteca */
+#secao-biblioteca .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    /* Força todos os cards a terem a mesma altura */
+    gap: 20px;
+}
+
+/* 1. Remove o espaço exagerado do título de Destaques */
+#secao-biblioteca h3 {
+    margin-top: 10px;
+    /* Ajuste esse valor conforme desejar (pode ser até 0) */
+    margin-bottom: 15px;
+    /* Espaço entre o título e os cards */
+}
+
+/* 2. Reduz o recuo interno da seção se houver */
+#secao-biblioteca .secao-padrao {
+    padding-top: 0px;
+    /* Remove o espaço no topo dentro da seção */
+}
+
+/* 3. Se houver um texto antes do título, reduza a margem dele também */
+#secao-biblioteca p {
+    margin-bottom: 5px;
+    /* Deixa o texto mais "grudado" no que vem abaixo */
+}
+
+/* Ajusta o comportamento interno do card da biblioteca */
+#secao-biblioteca .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Empurra o botão para o final */
+    height: auto;
+    /* Permite que o card cresça conforme o vizinho */
+    flex: 1 1 300px;
+    /* Dá flexibilidade e define uma largura base */
+    max-width: 350px;
+}
+
+/* Faz o parágrafo ocupar o espaço extra para alinhar os botões */
+#secao-biblioteca .card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.colunas-livros {
+    column-count: 3;
+    /* Divide em 3 colunas */
+    column-gap: 40px;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.colunas-livros li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+    /* Linha sutil para guiar o olho */
+    color: #444;
+    color: #333;           /* Define uma cor cinza escuro profissional */
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Linha divisória bem suave */
+    break-inside: avoid;   /* Impede que um nome de livro seja cortado entre colunas */
+}
+
+/* Efeito ao passar o mouse (opcional, fica bem moderno) */
+.colunas-livros li:hover {
+    background-color: #f9f9f9;
+    color: #0056b3; /* Muda a cor levemente ao passar o mouse */
+    cursor: default;
+}
+
+.lista-acervo-completo {
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o bloco da lista na tela */
+    padding: 20px;
 }
 
 /* Garante que os cards de vídeo tenham o mesmo tamanho dos de curso/biblioteca */
@@ -368,6 +490,20 @@ footer p {
     /* Diminui o espaço entre um parágrafo e outro */
     font-size: 1.0rem;
     /* Opcional: uma letra levemente menor fica elegante no rodapé */
+}
+
+/* Seleciona os links que estão dentro do seu footer */
+footer a, 
+.footer-info a {
+    color: #FFFFFF !important;    /* Força a cor branca */
+    text-decoration: none;         /* Remove o sublinhado */
+    transition: opacity 0.3s;      /* Deixa o efeito de passar o mouse mais suave */
+}
+
+/* Efeito opcional: quando passar o mouse, ele brilha ou fica levemente transparente */
+footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;    /* O sublinhado só aparece quando o usuário passa o mouse */
 }
 
 /* Estado Normal do Botão */
