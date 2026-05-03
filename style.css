@@ -422,41 +422,52 @@ section,
     border-bottom: 1px dotted #ccc;
     /* Linha sutil para guiar o olho */
     color: #444;
-    color: #333;           /* Define uma cor cinza escuro profissional */
+    color: #333;
+    /* Define uma cor cinza escuro profissional */
     padding: 8px 0;
-    border-bottom: 1px solid #eee; /* Linha divisória bem suave */
-    break-inside: avoid;   /* Impede que um nome de livro seja cortado entre colunas */
+    border-bottom: 1px solid #eee;
+    /* Linha divisória bem suave */
+    break-inside: avoid;
+    /* Impede que um nome de livro seja cortado entre colunas */
 }
 
 /* Efeito ao passar o mouse (opcional, fica bem moderno) */
 .colunas-livros li:hover {
     background-color: #f9f9f9;
-    color: #0056b3; /* Muda a cor levemente ao passar o mouse */
+    color: #0056b3;
+    /* Muda a cor levemente ao passar o mouse */
     cursor: default;
 }
 
 .lista-acervo-completo {
     max-width: 800px;
-    margin: 0 auto; /* Centraliza o bloco da lista na tela */
+    margin: 0 auto;
+    /* Centraliza o bloco da lista na tela */
     padding: 20px;
 }
 
 .galeria-conviver {
     display: grid;
     /* Cria colunas que se ajustam sozinhas (mínimo 250px cada) */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 15px; /* Espaço entre as fotos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    /* Espaço entre as fotos */
     margin-top: 30px;
     padding: 10px;
 }
 
 .galeria-conviver img {
     width: 100%;
-    height: 250px; /* Define uma altura padrão para todas */
-    object-fit: cover; /* Corta a imagem para preencher o quadrado sem distorcer */
-    border-radius: 12px; /* Cantos arredondados para um ar mais moderno */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve para dar profundidade */
-    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+    height: 250px;
+    /* Define uma altura padrão para todas */
+    object-fit: cover;
+    /* Corta a imagem para preencher o quadrado sem distorcer */
+    border-radius: 12px;
+    /* Cantos arredondados para um ar mais moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve para dar profundidade */
+    transition: transform 0.3s ease;
+    /* Efeito suave ao passar o mouse */
 }
 
 /* Efeito de zoom ao passar o mouse */
@@ -467,31 +478,41 @@ section,
 
 /* Estilo para dizer que as fotos da galeria são clicáveis */
 .galeria-conviver img {
-    cursor: pointer; /* Muda o mouse para a mãozinha */
+    cursor: pointer;
+    /* Muda o mouse para a mãozinha */
 }
 
 /* O Fundo do Lightbox (ocupa toda a tela) */
 .lightbox {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica fixo na tela, mesmo com scroll */
-    z-index: 1000; /* Garante que ficará em cima de TUDO */
-    padding-top: 50px; /* Espaço para a imagem não colar no topo */
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fica fixo na tela, mesmo com scroll */
+    z-index: 1000;
+    /* Garante que ficará em cima de TUDO */
+    padding-top: 50px;
+    /* Espaço para a imagem não colar no topo */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Habilita scroll se a imagem for gigante */
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto com 90% de opacidade */
+    overflow: auto;
+    /* Habilita scroll se a imagem for gigante */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo preto com 90% de opacidade */
 }
 
 /* A Imagem Ampliada */
 .lightbox-content {
     margin: auto;
     display: block;
-    max-width: 80%; /* Não deixa a imagem ficar maior que 80% da largura da tela */
-    max-height: 80vh; /* Não deixa a imagem ficar maior que 80% da altura da tela */
+    max-width: 80%;
+    /* Não deixa a imagem ficar maior que 80% da largura da tela */
+    max-height: 80vh;
+    /* Não deixa a imagem ficar maior que 80% da altura da tela */
     border-radius: 10px;
-    border: 3px solid white; /* Moldura branca charmosa */
+    border: 3px solid white;
+    /* Moldura branca charmosa */
 }
 
 /* Animação de zoom para abrir */
@@ -501,8 +522,13 @@ section,
 }
 
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* O Botão de Fechar (X) */
@@ -524,7 +550,7 @@ section,
 }
 
 /* Ajustes para celular (tela ficar maior) */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
     .lightbox-content {
         max-width: 95%;
         margin-top: 100px;
@@ -550,6 +576,42 @@ section,
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.chamada-youtube {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Um fundo leve para dar destaque */
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-primaria-teal);
+    /* Usa sua cor padrão */
+}
+
+.chamada-youtube p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-escuro);
+}
+
+.chamada-youtube a {
+    color: #FF0000;
+    /* Cor icônica do YouTube */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .chamada-youtube {
+        padding: 15px; /* Um pouco menor para telas pequenas */
+        margin: 20px 5%; /* Adiciona uma margem lateral para não colar nas bordas do celular */
+    }
+}
+
+.chamada-youtube a:hover {
+    text-decoration: underline;
+    color: var(--cor-destaque-laranja);
 }
 
 /* Para ficar um embaixo do outro no celular */
@@ -583,17 +645,21 @@ footer p {
 }
 
 /* Seleciona os links que estão dentro do seu footer */
-footer a, 
+footer a,
 .footer-info a {
-    color: #FFFFFF !important;    /* Força a cor branca */
-    text-decoration: none;         /* Remove o sublinhado */
-    transition: opacity 0.3s;      /* Deixa o efeito de passar o mouse mais suave */
+    color: #FFFFFF !important;
+    /* Força a cor branca */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    transition: opacity 0.3s;
+    /* Deixa o efeito de passar o mouse mais suave */
 }
 
 /* Efeito opcional: quando passar o mouse, ele brilha ou fica levemente transparente */
 footer a:hover {
     opacity: 0.8;
-    text-decoration: underline;    /* O sublinhado só aparece quando o usuário passa o mouse */
+    text-decoration: underline;
+    /* O sublinhado só aparece quando o usuário passa o mouse */
 }
 
 /* Estado Normal do Botão */
@@ -651,17 +717,20 @@ footer a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
+
     /* 1. Ajuste do Header: Faz o menu pular para baixo das logos */
     header {
         grid-template-columns: 1fr 1fr;
         height: auto;
         padding: 15px 5%;
     }
+
     nav {
         grid-row: 2;
         grid-column: span 2;
         margin-top: 15px;
     }
+
     nav ul {
         gap: 15px;
         flex-wrap: wrap;
@@ -669,7 +738,8 @@ footer a:hover {
     }
 
     /* 2. Ajuste dos Cards: Garante que não fiquem "esmagados" */
-    .cards, .video-grid {
+    .cards,
+    .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
@@ -680,6 +750,7 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
+
     /* 4. Ajuste das Colunas de Livros: 1 coluna em celulares */
     .colunas-livros {
         column-count: 1;
@@ -690,10 +761,12 @@ footer a:hover {
         max-width: 95%;
         margin-top: 25%;
     }
+
     .close-lightbox {
         top: 10px;
         right: 20px;
-        font-size: 50px; /* Mais fácil de clicar com o dedo */
+        font-size: 50px;
+        /* Mais fácil de clicar com o dedo */
     }
 
     /* 6. Galeria: Uma foto por linha em telas muito pequenas */
@@ -709,5 +782,6 @@ footer a:hover {
 }
 
 .mapa-container iframe {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Dá um leve destaque ao mapa */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Dá um leve destaque ao mapa */
 }
