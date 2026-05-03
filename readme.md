@@ -1,33 +1,65 @@
-📚 Portal EDESP - Biblioteca & Conteúdo
-Este é o portal oficial da EDESP, desenvolvido para facilitar o acesso a acervos literários, conteúdos educativos em vídeo e informações de contato. O projeto foca em uma interface limpa, responsiva e de fácil navegação.
+# 🌐 Portal EDESP — Conectando Conhecimento
 
-🚀 Funcionalidades
-Biblioteca Digital: Listagem de livros com modal de detalhes contendo informações sobre autores e organização.
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/Macedo74/portal-edesp?style=for-the-badge&color=008080" alt="Tamanho do Repositório">
+  <img src="https://img.shields.io/github/languages/top/Macedo74/portal-edesp?style=for-the-badge&color=orange" alt="Linguagem Principal">
+  <img src="https://img.shields.io/github/last-commit/Macedo74/portal-edesp?style=for-the-badge&color=008080" alt="Último Commit">
+</p>
 
-Central de Vídeos: Galeria de vídeos integrados diretamente do YouTube.
+---
 
-Geolocalização: Integração com Google Maps para localização da unidade.
+## 🎯 Sobre o Projeto
+O **Portal EDESP** é uma plataforma centralizada para a divulgação de acervos literários e conteúdos educativos. O foco do projeto é oferecer uma experiência de usuário fluida, com acesso rápido a informações institucionais e materiais de apoio.
 
-Design Responsivo: Adaptado para dispositivos móveis, tablets e desktops.
+---
 
-Chamada para Ação (CTA): Link direto para o canal oficial da EDESP no YouTube.
+## 🛠️ Tecnologias Utilizadas
 
-🛠️ Tecnologias Utilizadas
-HTML5: Estruturação semântica do conteúdo.
+<p align="left">
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="80" height="80">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" width="80" height="80">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="80" height="80">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://pages.github.com/">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original-wordmark.svg" alt="GitHub Pages" width="80" height="80">
+  </a>
+</p>
 
-CSS3: Estilização moderna, incluindo o uso de Flexbox, Grid e variáveis CSS.
+---
 
-JavaScript (Vanilla): Lógica para abertura de modais e manipulação dinâmica de dados.
+## ✨ Destaques e Funcionalidades
 
-GitHub Pages: Hospedagem rápida e segura do portal.
+### 📖 Biblioteca Interativa
+*   Galeria organizada de obras literárias com **modais dinâmicos**.
+*   Padronização visual das capas dos livros para uma navegação limpa.
 
-📁 Estrutura de Pastas
-Plaintext
-├── assets/          # Imagens, logos e capas de livros (.png)
-├── index.html       # Página principal
-├── biblioteca.html  # Galeria de livros
-├── contato.html     # Informações de contato e mapa
-├── style.css        # Arquivo principal de estilos
-└── README.md        # Documentação do projeto
-🔧 Como visualizar o projeto localmente:
-git clone https://github.com/Macedo74/portal-edesp.git
+### 🎥 Integração com YouTube
+*   Exibição de vídeos educativos com layout em grid.
+*   Chamada visual destacada para o canal oficial da **EDESP**.
+
+### 📱 Design Mobile-First
+*   Layout adaptável para qualquer tamanho de tela (Smartphones, Tablets e Desktops).
+*   Menu de navegação intuitivo e ícones responsivos.
+
+### 📍 Geolocalização
+*   Mapa interativo integrado para localização da unidade física.
+
+---
+
+## 📁 Estrutura de Pastas
+
+```bash
+├── 📂 assets          # Identidade visual e capas dos livros
+├── 📂 js              # Scripts de comportamento e modais
+├── 📄 index.html      # Home do Portal
+├── 📄 biblioteca.html # Espaço Literário
+├── 📄 contato.html    # Central de Atendimento e Mapa
+└── 🎨 style.css       # Estilização Global e Responsividade
