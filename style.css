@@ -441,6 +441,96 @@ section,
     padding: 20px;
 }
 
+.galeria-conviver {
+    display: grid;
+    /* Cria colunas que se ajustam sozinhas (mínimo 250px cada) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px; /* Espaço entre as fotos */
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.galeria-conviver img {
+    width: 100%;
+    height: 250px; /* Define uma altura padrão para todas */
+    object-fit: cover; /* Corta a imagem para preencher o quadrado sem distorcer */
+    border-radius: 12px; /* Cantos arredondados para um ar mais moderno */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve para dar profundidade */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.galeria-conviver img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Estilo para dizer que as fotos da galeria são clicáveis */
+.galeria-conviver img {
+    cursor: pointer; /* Muda o mouse para a mãozinha */
+}
+
+/* O Fundo do Lightbox (ocupa toda a tela) */
+.lightbox {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela, mesmo com scroll */
+    z-index: 1000; /* Garante que ficará em cima de TUDO */
+    padding-top: 50px; /* Espaço para a imagem não colar no topo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll se a imagem for gigante */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto com 90% de opacidade */
+}
+
+/* A Imagem Ampliada */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Não deixa a imagem ficar maior que 80% da largura da tela */
+    max-height: 80vh; /* Não deixa a imagem ficar maior que 80% da altura da tela */
+    border-radius: 10px;
+    border: 3px solid white; /* Moldura branca charmosa */
+}
+
+/* Animação de zoom para abrir */
+.lightbox-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* O Botão de Fechar (X) */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-lightbox:hover,
+.close-lightbox:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Ajustes para celular (tela ficar maior) */
+@media only screen and (max-width: 700px){
+    .lightbox-content {
+        max-width: 95%;
+        margin-top: 100px;
+    }
+}
+
 /* Garante que os cards de vídeo tenham o mesmo tamanho dos de curso/biblioteca */
 .card-video {
     flex: 0 1 300px;
@@ -554,4 +644,70 @@ footer a:hover {
 .conteudo-institucional ul {
     text-align: left;
     /* Parágrafos e listas à esquerda */
+}
+
+/* ==========================================================================
+   AJUSTES EXCLUSIVOS DE RESPONSIVIDADE (ADICIONAR AO FIM DO ARQUIVO)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Header: Faz o menu pular para baixo das logos */
+    header {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        padding: 15px 5%;
+    }
+    nav {
+        grid-row: 2;
+        grid-column: span 2;
+        margin-top: 15px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 2. Ajuste dos Cards: Garante que não fiquem "esmagados" */
+    .cards, .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* 3. Ajuste das Colunas de Livros: 2 colunas em tablets */
+    .colunas-livros {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    /* 4. Ajuste das Colunas de Livros: 1 coluna em celulares */
+    .colunas-livros {
+        column-count: 1;
+    }
+
+    /* 5. Ajuste do Lightbox: Imagem aproveita melhor a tela do celular */
+    .lightbox-content {
+        max-width: 95%;
+        margin-top: 25%;
+    }
+    .close-lightbox {
+        top: 10px;
+        right: 20px;
+        font-size: 50px; /* Mais fácil de clicar com o dedo */
+    }
+
+    /* 6. Galeria: Uma foto por linha em telas muito pequenas */
+    .galeria-conviver {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mapa-container {
+    margin: 15px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mapa-container iframe {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Dá um leve destaque ao mapa */
 }
